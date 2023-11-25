@@ -1,0 +1,114 @@
+<!-- steganography_app/templates/steganography_app/home.html -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Steganography Home</title>
+    <style>
+      /* styles.css */
+
+      body {
+        font-family: Arial, sans-serif;
+        margin: 20px;
+        padding: 20px;
+        background-color: #f0f0f0;
+      }
+
+      h2 {
+        color: #333;
+      }
+
+      p {
+        color: #555;
+        font-size: 20px;
+      }
+
+      a {
+        display: inline-block;
+        margin-right: 10px;
+        padding: 35px 70px;
+        text-decoration: none;
+        font-size: 25px;
+        color: #fff;
+        background-color: #007bff;
+        border-radius: 5px;
+      }
+
+      a:hover {
+        background-color: #0056b3;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      label {
+        display: block;
+        margin-bottom: 5px;
+        color: #333;
+      }
+
+      input[type="file"] {
+        margin-bottom: 10px;
+      }
+
+      textarea {
+        width: 100%;
+        height: 100px;
+        margin-bottom: 10px;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #28a745;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #218838;
+      }
+
+      .navbar {
+        display: flex;
+        background-color: rgb(35, 35, 35);
+        padding: 15px 20px;
+        color: white;
+        width: 100%;
+        align-items: center;
+        font-size: 25px;
+      }
+
+      .data-container {
+        width: 100%;
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .content {
+        text-align: center;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    </style>
+  </head>
+  <body>
+    <section class="hero-section">
+      <nav class="navbar">
+        <h1>HIDING TEXT IN IMAGE</h1>
+      </nav>
+    </section>
+
+    <div class="content">
+      <h2>Welcome to Image Steganography</h2>
+      <p>Choose an option:</p>
+      <a href="{% url 'encode' %}">Encode</a>
+      <a href="{% url 'decode' %}">Decode</a>
+    </div>
+  </body>
+</html>
